@@ -1,13 +1,11 @@
 pipeline{
     agent any
-    environment{
-        notifyEmail=sudeep.kumar01@nagarro.com
-    }
+    
     tools{
         maven 'localmaven'
     }
     triggers{
-        cron('0 06 * * *')
+        cron('H 06 * * *')
     }
     stages{
         stage("code checkout"){
